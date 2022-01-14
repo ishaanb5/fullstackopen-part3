@@ -1,7 +1,11 @@
 const express = require('express')
 const morgan = require('morgan')
+const cors = require('cors')
+const path = require('path')
 const app = express()
 
+app.use(cors())
+app.use(express.static(path.join(__dirname, 'build')))
 app.use(express.json())
 app.use(morgan('tiny', { skip: (req, res) => req.method === 'POST' }))
 morgan.token('request-body', (request, response) =>

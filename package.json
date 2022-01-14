@@ -6,15 +6,21 @@
   "scripts": {
     "test": "echo \"Error: No test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build:ui": "cd ../part2/phonebook && npm run build && cp -r build ../../part3 && cd ../../part3",
+    "deploy": "git push heroku master"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.2",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
