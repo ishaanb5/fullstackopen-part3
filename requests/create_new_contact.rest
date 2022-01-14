@@ -5,3 +5,13 @@ Content-Type: application/json
 "name": "Greyson Kihn",
 "number": "1-712-772-5066"
 }
+
+###
+
+POST https://tranquil-beyond-01288.herokuapp.com/api/persons
+Content-Type: application/json
+
+{
+"name": "Greyson Kihn",
+"number": "1-712-772-5066"
+}
