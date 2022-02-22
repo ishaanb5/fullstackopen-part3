@@ -14,7 +14,6 @@ const personSchema = mongoose.Schema({
     required: [true, '{Path} is a required field'],
     unique: true,
     minLength: [3, 'Minimum length of {PATH} should be 3'],
-    lowercase: true,
   },
   number: {
     type: String,
